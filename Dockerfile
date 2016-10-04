@@ -11,7 +11,7 @@ WORKDIR /opt/openshift/src
 
 ## Create downloads
 RUN tar -zcf ./openshift-client-linux.tar.gz -C /usr/share/atomic-openshift/linux oc
-RUN tar -zcf ./openshift-client-macosx.tar.gz -C /usr/share/atomic-openshift/maxosx oc
+RUN tar -zcf ./openshift-client-macosx.tar.gz -C /usr/share/atomic-openshift/macosx oc
 RUN zip -j -b /usr/share/atomic-openshift/windows/oc.exe ./openshift-client-windows.zip
 
 ADD index.php
