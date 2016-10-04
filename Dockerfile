@@ -13,6 +13,7 @@ WORKDIR /opt/openshift/src
 RUN tar -zcf ./openshift-client-linux.tar.gz -C /usr/share/atomic-openshift/linux oc
 RUN tar -zcf ./openshift-client-macosx.tar.gz -C /usr/share/atomic-openshift/macosx oc
 RUN zip openshift-client-windows.zip -j -b /usr/share/atomic-openshift/windows /usr/share/atomic-openshift/windows/oc.exe
+RUN chown 1001:1001 -R *
 
 RUN rm -f Dockerfile && rm -f index.php && rm -f README.md
 
