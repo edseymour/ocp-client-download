@@ -14,6 +14,6 @@ RUN tar -zcf ./openshift-client-linux.tar.gz -C /usr/share/atomic-openshift/linu
 RUN tar -zcf ./openshift-client-macosx.tar.gz -C /usr/share/atomic-openshift/macosx oc
 RUN zip openshift-client-windows.zip -j -b /usr/share/atomic-openshift/windows /usr/share/atomic-openshift/windows/oc.exe
 
-ADD index.php
+ADD index.php index.php
 
 USER 1001
