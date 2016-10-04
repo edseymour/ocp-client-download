@@ -1,7 +1,7 @@
 FROM registry.access.redhat.com/rhscl/php-56-rhel7:latest
 
 USER root
-RUN yum install -y atomic-openshift-clients-redistributable tar zip && yum clean all && rpm -ql atomic-openshift-clients-redistributable
+RUN yum install -y --enablerepo=rhel-7-server-ose-3.2-rpms atomic-openshift-clients-redistributable tar zip && yum clean all
 
 ## /usr/share/atomic-openshift/linux/oc
 ## /usr/share/atomic-openshift/macosx/oc
