@@ -17,3 +17,4 @@ ADD index.php /opt/app-root/src/index.php
 RUN chown -R 1001:0 /opt/app-root
 
 USER 1001
+CMD /usr/libexec/s2i/run
