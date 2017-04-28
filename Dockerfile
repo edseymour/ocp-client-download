@@ -15,6 +15,7 @@ RUN zip /opt/app-root/src/openshift-client-windows.zip -j -b /usr/share/atomic-o
 ADD index.php /opt/app-root/src/index.php
 
 RUN chown -R 1001:0 /opt/app-root
+RUN chmod -R 644 /opt/app-root/src/*
 
 USER 1001
 CMD /usr/libexec/s2i/run
